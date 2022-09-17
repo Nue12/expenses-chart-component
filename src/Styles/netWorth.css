@@ -1,0 +1,29 @@
+:root {
+    --Soft-red--: hsl(10, 79%, 65%);
+    --Cyan--: hsl(186, 34%, 60%);
+
+    --Dark-brown--: hsl(25, 47%, 15%);
+    --Medium-brown--: hsl(28, 10%, 53%);
+    --Cream--: hsl(27, 66%, 92%);
+    --Very-pale-orange--: hsl(33, 100%, 98%);
+}
+
+.netWorth {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: var(--Soft-red--);
+    max-width: 375px;
+    margin: 0px auto;
+    border-radius: 10px;
+}
+
+.netWorth p {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.appLogo {
+    width: 60px;
+}
