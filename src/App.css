@@ -1,4 +1,12 @@
 #root {
   max-width: 1440px;
-  margin: 0px auto;
+  margin: auto;
+}
+
+main {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

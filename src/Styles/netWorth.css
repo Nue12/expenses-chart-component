@@ -15,7 +15,7 @@
     padding: 20px 30px;
     background-color: var(--Soft-red--);
     max-width: 375px;
-    margin: 0px auto;
+    margin: auto;
     border-radius: 10px;
 }
 

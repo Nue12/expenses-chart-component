@@ -4,12 +4,16 @@ import DalySpenses from '../../data.json'
 
 function TotalSpenses() {
 
-  const mouseOverHandler = (event) => {
-    const target = event.target;
-    const amountDiv = target.parentElement.firstChild;
-    amountDiv.style.display = 'block';
-    console.log(amountDiv);
-  }
+  const [highestSpense, setHighestSpense] = React.useState(0);
+
+  React.useEffect(() => {
+    const weeklySpenses = [];
+    DalySpenses.map(spenses => {
+      weeklySpenses.push(Math.round((Math.round(spenses.amount) / 70) * 130));
+    })
+    console.log(Math.max(...weeklySpenses))
+    setHighestSpense(Math.max(...weeklySpenses));
+  }, [])
 
   return (
     <section className='detailSpenses'>
@@ -21,15 +25,27 @@ function TotalSpenses() {
           DalySpenses && DalySpenses.map(dalySpenses => {
             return (
               <div className='graphs-container' key={dalySpenses.day}>
+                {
+                  highestSpense !== Math.round((Math.round(dalySpenses.amount) / 70) * 130) ?
 
-                <div className='hover-container'>
-                  <div className='amountHover'>${dalySpenses.amount}</div>
-                  <div 
-                    style={{height: Math.round((Math.round(dalySpenses.amount) / 70) * 130)}} 
-                    className='graph'
-                  >
+                  <div className='hover-container'>
+                    <div className='amountHover'>${dalySpenses.amount}</div>
+                    <div 
+                      style={{height: Math.round((Math.round(dalySpenses.amount) / 70) * 130)}} 
+                      className='graph'
+                    >
+                    </div>
+                  </div> :
+
+                  <div className='highestHover-container'>
+                    <div className='amountHover'>${dalySpenses.amount}</div>
+                    <div 
+                      style={{height: Math.round((Math.round(dalySpenses.amount) / 70) * 130)}} 
+                      className='highestGraph'
+                    >
+                    </div>
                   </div>
-                </div>
+                }
                 
                 <div>{dalySpenses.day}</div>
               </div>

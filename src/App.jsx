@@ -5,10 +5,10 @@ import TotalSpenses from './Component/TotalSpenses'
 
 function App() {
   return (
-    <>
+    <main>
       <NetWorth />
       <TotalSpenses />
-    </>
+    </main>
   )
 }
 
