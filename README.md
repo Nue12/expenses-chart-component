@@ -4,6 +4,8 @@
 
 ## Welcome! 👋
 
+In this challenge, the graph is not only built by HTML, CSS 
+I built the graph by using data from json file and calculate the number and transform into graph. So codes are clean and reusable.
 
 ### Links
 
