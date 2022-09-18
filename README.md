@@ -9,8 +9,8 @@ I built the graph by using data from json file and calculate the number and tran
 
 ### Links
 
-- Solution URL: [Frontend mentor solution](https://your-solution-url.com)
-- Live Site URL: [live site](https://your-live-site-url.com)
+- Solution URL: [Frontend mentor solution](https://www.frontendmentor.io/solutions/expenses-chart-component-using-reactjs-v9K-3rR4AH)
+- Live Site URL: [live site](https://nue-expenses-chart-component.netlify.app/)
 
 
 ### Built with
